@@ -293,7 +293,7 @@
 			<h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><h3 id="英文版"><a href="#英文版" class="headerlink" title="英文版"></a>英文版</h3><p>  Write a class with one virtual function and one non-virtual function. Inherit a new class, make an object of this class, and upcast to a pointer of the base-class type. Use the clock( ) function found in <ctime> (you’ll need to look this up in your local C library guide) to measure the difference between a virtual call and non-virtual call. You’ll need to make multiple calls to each function inside your timing loop in order to see the difference.</p>
 <h3 id="粗略翻译"><a href="#粗略翻译" class="headerlink" title="粗略翻译"></a>粗略翻译</h3><p>  编写一个具有一个虚函数和一个非虚函数的类。继承新类，生成此类的对象，并向上转换为基类类型的指针。使用<ctime>中的clock()函数（需要在本地C库指南中查找）来测量虚拟调用和非虚拟调用之间的差异。您需要对时间循环中的每个函数进行多次调用，才能查看差异。</p>
 <h2 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h2><p>  通过分别调用相同类的虚函数和非虚函数，记录并输出调用两种函数所需要的时间，通过比较输出时间的差异，来测试虚函数和非虚函数运行效率的差异。</p>
-<h2 id="代码实现-工程版"><a href="#代码实现-工程版" class="headerlink" title="代码实现(工程版)"></a>代码实现(工程版)</h2><h3 id="工程截图"><a href="#工程截图" class="headerlink" title="工程截图"></a>工程截图</h3><p><img src="http://i1.fuimg.com/736723/29bddf4831d8f856.png" alt="工程截图"><br><img src="http://i1.fuimg.com/736723/29bddf4831d8f856.png" width="50%"></p>
+<h2 id="代码实现-工程版"><a href="#代码实现-工程版" class="headerlink" title="代码实现(工程版)"></a>代码实现(工程版)</h2><h3 id="工程截图"><a href="#工程截图" class="headerlink" title="工程截图"></a>工程截图</h3><p><img src="http://i1.fuimg.com/736723/29bddf4831d8f856.png" alt="工程截图"></p>
 <h3 id="text-h"><a href="#text-h" class="headerlink" title="text.h"></a>text.h</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plain">#pragma once<br>class text<br>&#123;<br>public:<br>	virtual void xu(); &#x2F;&#x2F;一个虚函数<br>	void feiXu(); &#x2F;&#x2F;一个非虚函数<br>&#125;;<br></code></pre></td></tr></table></figure>
 <h3 id="text-cpp"><a href="#text-cpp" class="headerlink" title="text.cpp"></a>text.cpp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plain">#include &quot;text.h&quot; &#x2F;&#x2F;引入头文件<br>#include &lt;iostream&gt;<br>void text::xu() &#x2F;&#x2F;输出相关信息代表此虚函数的调用<br>&#123; <br>	std::cout &lt;&lt; &quot;I AM A XU TEXT&quot; &lt;&lt; std::endl; <br>&#125;<br>void text::feiXu() &#x2F;&#x2F;输出相关信息代表此非虚函数的调用<br>&#123; <br>	std::cout &lt;&lt; &quot;I AM A FEIXU TEXT&quot; &lt;&lt; std::endl; <br>&#125;<br></code></pre></td></tr></table></figure>
 <h3 id="textson-h"><a href="#textson-h" class="headerlink" title="textson.h"></a>textson.h</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plain">#pragma once<br>#include &quot;text.h&quot; &#x2F;&#x2F;引入基类头文件<br>class textson : public text &#x2F;&#x2F;继承于text类<br>&#123;<br>public:<br>	void feiXu();  &#x2F;&#x2F;override 非虚函数<br>	void xu(); &#x2F;&#x2F; override 虚函数<br>&#125;;<br></code></pre></td></tr></table></figure>
@@ -746,9 +746,48 @@
 
 	<!-- site-analysis -->
 	
+	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "//hm.baidu.com/hm.js?";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
 	
+	<script src="//s6.cnzz.com/stat.php?id=&web_id=" type="text/javascript"></script>
+
 	
+	<!-- Google Analytics -->
+	<script type="text/javascript">
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+		ga('create', '', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
 	
+	<script type="text/javascript">
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "//tajs.qq.com/stats?sId=";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script>
+
 	
  
 
