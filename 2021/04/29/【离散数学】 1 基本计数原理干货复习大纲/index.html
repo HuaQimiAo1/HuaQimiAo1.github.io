@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      虚函数和非虚函数运行效率的测试与比较 | 花花的奇妙历险
+      【离散数学】 1 基本计数原理干货复习大纲 | 花花的奇妙历险
     
   </title>
   <meta name="author" content="">
@@ -100,7 +100,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「虚函数和非虚函数运行效率的测试与比较」
+			「【离散数学】 1 基本计数原理干货复习大纲」
 		
 	</p>
 
@@ -246,8 +246,8 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2021/04/27/%E8%99%9A%E5%87%BD%E6%95%B0%E5%92%8C%E9%9D%9E%E8%99%9A%E5%87%BD%E6%95%B0%E8%BF%90%E8%A1%8C%E6%95%88%E7%8E%87%E7%9A%84%E6%B5%8B%E8%AF%95%E4%B8%8E%E6%AF%94%E8%BE%83/" itemprop="url">
-		虚函数和非虚函数运行效率的测试与比较
+	<a href="/2021/04/29/%E3%80%90%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E3%80%91%201%20%E5%9F%BA%E6%9C%AC%E8%AE%A1%E6%95%B0%E5%8E%9F%E7%90%86%E5%B9%B2%E8%B4%A7%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" itemprop="url">
+		【离散数学】 1 基本计数原理干货复习大纲
 	</a>
 
 		</div>
@@ -263,8 +263,8 @@
 
 	更新于
 
-	<a href="/2021/04/27/%E8%99%9A%E5%87%BD%E6%95%B0%E5%92%8C%E9%9D%9E%E8%99%9A%E5%87%BD%E6%95%B0%E8%BF%90%E8%A1%8C%E6%95%88%E7%8E%87%E7%9A%84%E6%B5%8B%E8%AF%95%E4%B8%8E%E6%AF%94%E8%BE%83/" itemprop="url">
-		<time datetime="2021-04-27T06:09:14.000Z" itemprop="dateUpdated">
+	<a href="/2021/04/29/%E3%80%90%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E3%80%91%201%20%E5%9F%BA%E6%9C%AC%E8%AE%A1%E6%95%B0%E5%8E%9F%E7%90%86%E5%B9%B2%E8%B4%A7%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" itemprop="url">
+		<time datetime="2021-04-29T05:40:54.000Z" itemprop="dateUpdated">
 	  		2021-04-29
 	  </time>
 	</a> 
@@ -276,8 +276,8 @@
 				
 	<i class="icon-price-tags"></i>
 	
-		<a href="/tags/C/" class=" ">
-			C++
+		<a href="/tags/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" class=" ">
+			离散数学
 		</a>
 	
 		
@@ -290,20 +290,39 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<h2 id="任务描述"><a href="#任务描述" class="headerlink" title="任务描述"></a>任务描述</h2><h3 id="英文版"><a href="#英文版" class="headerlink" title="英文版"></a>英文版</h3><p>  Write a class with one virtual function and one non-virtual function. Inherit a new class, make an object of this class, and upcast to a pointer of the base-class type. Use the clock( ) function found in <ctime> (you’ll need to look this up in your local C library guide) to measure the difference between a virtual call and non-virtual call. You’ll need to make multiple calls to each function inside your timing loop in order to see the difference.</p>
-<h3 id="粗略翻译"><a href="#粗略翻译" class="headerlink" title="粗略翻译"></a>粗略翻译</h3><p>  编写一个具有一个虚函数和一个非虚函数的类。继承新类，生成此类的对象，并向上转换为基类类型的指针。使用<ctime>中的clock()函数（需要在本地C库指南中查找）来测量虚拟调用和非虚拟调用之间的差异。您需要对时间循环中的每个函数进行多次调用，才能查看差异。</p>
-<h2 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h2><p>  通过分别调用相同类的虚函数和非虚函数，记录并输出调用两种函数所需要的时间，通过比较输出时间的差异，来测试虚函数和非虚函数运行效率的差异。</p>
-<h2 id="代码实现-工程版"><a href="#代码实现-工程版" class="headerlink" title="代码实现(工程版)"></a>代码实现(工程版)</h2><h3 id="工程截图"><a href="#工程截图" class="headerlink" title="工程截图"></a>工程截图</h3><p><img src="http://i1.fuimg.com/736723/29bddf4831d8f856.png" alt="工程截图"></p>
-<h3 id="text-h"><a href="#text-h" class="headerlink" title="text.h"></a>text.h</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plain">#pragma once<br>class text<br>&#123;<br>public:<br>	virtual void xu(); &#x2F;&#x2F;一个虚函数<br>	void feiXu(); &#x2F;&#x2F;一个非虚函数<br>&#125;;<br></code></pre></td></tr></table></figure>
-<h3 id="text-cpp"><a href="#text-cpp" class="headerlink" title="text.cpp"></a>text.cpp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plain">#include &quot;text.h&quot; &#x2F;&#x2F;引入头文件<br>#include &lt;iostream&gt;<br>void text::xu() &#x2F;&#x2F;输出相关信息代表此虚函数的调用<br>&#123; <br>	std::cout &lt;&lt; &quot;I AM A XU TEXT&quot; &lt;&lt; std::endl; <br>&#125;<br>void text::feiXu() &#x2F;&#x2F;输出相关信息代表此非虚函数的调用<br>&#123; <br>	std::cout &lt;&lt; &quot;I AM A FEIXU TEXT&quot; &lt;&lt; std::endl; <br>&#125;<br></code></pre></td></tr></table></figure>
-<h3 id="textson-h"><a href="#textson-h" class="headerlink" title="textson.h"></a>textson.h</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plain">#pragma once<br>#include &quot;text.h&quot; &#x2F;&#x2F;引入基类头文件<br>class textson : public text &#x2F;&#x2F;继承于text类<br>&#123;<br>public:<br>	void feiXu();  &#x2F;&#x2F;override 非虚函数<br>	void xu(); &#x2F;&#x2F; override 虚函数<br>&#125;;<br></code></pre></td></tr></table></figure>
-<h3 id="textson-cpp"><a href="#textson-cpp" class="headerlink" title="textson.cpp"></a>textson.cpp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plain">#include &quot;textson.h&quot; &#x2F;&#x2F;引入头文件<br>#include &lt;iostream&gt;<br>void textson::feiXu() &#x2F;&#x2F;输出相关信息代表此虚函数的调用<br>&#123; <br>	std::cout &lt;&lt; &quot;I AM A FEIXU TEXTSON&quot; &lt;&lt; std::endl; <br>&#125;<br>void textson::xu() &#x2F;&#x2F;输出相关信息代表此非虚函数的调用<br>&#123; <br>	std::cout &lt;&lt; &quot;I AM A XU TEXTSON&quot; &lt;&lt; std::endl; <br>&#125;<br></code></pre></td></tr></table></figure>
-<h3 id="main-cpp"><a href="#main-cpp" class="headerlink" title="main.cpp"></a>main.cpp</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs plain">#include &lt;iostream&gt;<br>#include &lt;string&gt;<br>#include &lt;time.h&gt;<br>#include &quot;text.h&quot;<br>#include &quot;textson.h&quot; &#x2F;&#x2F;引入头文件<br>using namespace std; &#x2F;&#x2F;引用clock()函数<br>int main()<br>&#123;<br>	clock_t start1, stop1, start2, stop2, start3, stop3, start4, stop4;&#x2F;&#x2F;记录运行前和运行后的时间点<br>	textson* pa &#x3D; new textson; &#x2F;&#x2F;创建子类textson对象<br>	text* pb &#x3D; (text*)pa; &#x2F;&#x2F;把pa向上转换为text类pb<br>	start1 &#x3D; clock(); &#x2F;&#x2F;开始时间点<br>	for (int i &#x3D; 1; i &lt;&#x3D; 500; i++)  &#x2F;&#x2F;多次执行，方便记录时间<br>		pa-&gt;feiXu(); &#x2F;&#x2F;执行非虚函数<br>	stop1 &#x3D; clock(); &#x2F;&#x2F;结束时间点<br>	start2 &#x3D; clock(); &#x2F;&#x2F;开始时间点<br>	for (int i &#x3D; 1; i &lt;&#x3D; 500; i++) &#x2F;&#x2F;多次执行，方便记录时间<br>		pa-&gt;xu(); &#x2F;&#x2F;执行虚函数<br>	stop2 &#x3D; clock(); &#x2F;&#x2F;结束时间点<br>	start3 &#x3D; clock(); &#x2F;&#x2F;开始时间点<br>	for (int i &#x3D; 1; i &lt;&#x3D; 500; i++) &#x2F;&#x2F;多次执行，方便记录时间<br>		pb-&gt;feiXu(); &#x2F;&#x2F;执行非虚函数<br>	stop3 &#x3D; clock(); &#x2F;&#x2F;结束时间点<br>	start4 &#x3D; clock(); &#x2F;&#x2F;开始时间点<br>	for (int i &#x3D; 1; i &lt;&#x3D; 500; i++) &#x2F;&#x2F;多次执行，方便记录时间<br>		pb-&gt;xu(); &#x2F;&#x2F;执行虚函数<br>	stop4 &#x3D; clock(); &#x2F;&#x2F;结束时间点<br>	double duration1, duration2, duration3, duration4; &#x2F;&#x2F;代表程序进行时间<br>	duration1 &#x3D; (double(stop1 - start1)) &#x2F; CLK_TCK; &#x2F;&#x2F;计算进行时间，用总时间除以单位时间<br>	duration2 &#x3D; (double(stop2 - start2)) &#x2F; CLK_TCK;<br>	duration3 &#x3D; (double(stop3 - start3)) &#x2F; CLK_TCK;<br>	duration4 &#x3D; (double(stop4 - start4)) &#x2F; CLK_TCK;<br>	cout &lt;&lt; &quot;Runtime of feiXu is&quot; &lt;&lt; duration1 &lt;&lt; &quot; &quot; &lt;&lt; &quot;Runtime of Xu is&quot; &lt;&lt; duration2 &lt;&lt; endl &lt;&lt; &quot;Runtime of feiXu is&quot; &lt;&lt; duration3 &lt;&lt; &quot; &quot; &lt;&lt; &quot;Runtime of Xu is&quot; &lt;&lt; duration4 &lt;&lt; endl; &#x2F;&#x2F;分别输出进行时间<br>	pa-&gt;feiXu(); pa-&gt;xu();<br>	pb-&gt;feiXu(); pb-&gt;xu(); &#x2F;&#x2F;输出四个函数的分别执行情况<br>	delete pa; &#x2F;&#x2F;销毁pa指针<br>&#125;<br></code></pre></td></tr></table></figure>
-<h3 id="输出截图"><a href="#输出截图" class="headerlink" title="输出截图"></a>输出截图</h3><p><img src="http://i1.fuimg.com/736723/ab273ed04240d218.png" alt="输出截图"></p>
+			<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><p>仅做干货核心重点知识点的梳理，具体内容还需自己另行学习掌握。</p>
+<h2 id="基本计数原理重点知识大纲"><a href="#基本计数原理重点知识大纲" class="headerlink" title="基本计数原理重点知识大纲"></a>基本计数原理重点知识大纲</h2><ul>
+<li><p>1.1 加法原理和乘法原理</p>
+<blockquote>
+<p>有限集映射计数<br>一一对应映射计数<br>子集计数</p>
+</blockquote>
+</li>
+<li><p>1.2 排列和组合</p>
+<blockquote>
+<p>环形排列<br>多重集的排列<br>多重集的组合</p>
+<blockquote>
+<p>k元组满足条件的整数解个数<br>多重集合的n组合数目<br>n个无区别的球放入k个有区别的盒子的不同方式数<br>n个1，k-1个0组成的多重集S的全排列数</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>1.3 二项式定理和多项式定理</p>
+<blockquote>
+<p>二项式系数的性质<br>复数域下的牛顿二项式定理<br>多项式的展开</p>
+</blockquote>
+</li>
+<li><p>1.4 Catalan数</p>
+<blockquote>
+<p>定义<br>递推性质<br>实际意义</p>
+<blockquote>
+<p>从(0,0)到(n,n)的下对角线矩形格数目<br>n个+1和n个-1组成的数列部分和大于等于0的数列个数<br>合法出栈序列数目<br>n+1个矩阵的不同乘法方式数目<br>n个结点的不同二叉树计数</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
 	
 		</div>
 		
-		<div id="current-post-cover" data-scr="http://i2.tiimg.com/736723/071b4cb16c0098cf.png"></div>
+		<div id="current-post-cover" data-scr="http://i2.tiimg.com/736723/cd6feb04feba368b.png"></div>
 
 		<!-- relate post, comment...-->
 		<div class="investment-container">
@@ -318,12 +337,8 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2021/04/27/%E5%90%84%E7%A7%8D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%BA%94%E7%94%A8/" title="各种构造函数的应用" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2021/04/25/%E3%80%902020%E5%B9%B49%E6%9C%88%E5%9B%9B%E7%BA%A7%E7%9C%9F%E9%A2%98%20%E7%AC%AC%E4%BA%8C%E5%A5%97%E3%80%91%E5%8C%97%E4%BA%AC%E7%83%A4%E9%B8%AD%E7%BF%BB%E8%AF%91/" title="【2020年9月四级真题 第二套】北京烤鸭翻译" rel="next">
+			<a href="/2021/04/27/%E5%90%84%E7%A7%8D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%BA%94%E7%94%A8/" title="各种构造函数的应用" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -344,39 +359,6 @@
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2021/04/29/%E3%80%90%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E3%80%91%201%20%E5%9F%BA%E6%9C%AC%E8%AE%A1%E6%95%B0%E5%8E%9F%E7%90%86%E5%B9%B2%E8%B4%A7%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" title="【离散数学】 1 基本计数原理干货复习大纲">
-								【离散数学】 1 基本计数原理干货复习大纲			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								四月 29日, 2021				
-							</p>
-							<p class="relate-post-content">
-								Tips仅做干货核心重点知识点的梳理，具体内容还需自己另行学习掌握。
-基本计数原理重点知识大纲
-1.1 加法原理和乘法原理
-
-有限集映射计数一一对应映射计数子集计数
-
-
-1.2 排列和组合
-
-环形排列多重集的排列多重集的组合
-
-k元组...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2021/04/29/%E3%80%90%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6%E3%80%91%201%20%E5%9F%BA%E6%9C%AC%E8%AE%A1%E6%95%B0%E5%8E%9F%E7%90%86%E5%B9%B2%E8%B4%A7%E5%A4%8D%E4%B9%A0%E5%A4%A7%E7%BA%B2/" title="【离散数学】 1 基本计数原理干货复习大纲">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="http://i2.tiimg.com/736723/cd6feb04feba368b.png" alt="【离散数学】 1 基本计数原理干货复习大纲"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
 							<a class="relate-post-title" href="/2021/04/27/%E5%90%84%E7%A7%8D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%BA%94%E7%94%A8/" title="各种构造函数的应用">
 								各种构造函数的应用			
 							</a>
@@ -393,6 +375,28 @@ k元组...
 							<a href="/2021/04/27/%E5%90%84%E7%A7%8D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%BA%94%E7%94%A8/" title="各种构造函数的应用">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="http://i1.fuimg.com/736723/43d310b880281f3c.png" alt="各种构造函数的应用"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2021/04/27/%E8%99%9A%E5%87%BD%E6%95%B0%E5%92%8C%E9%9D%9E%E8%99%9A%E5%87%BD%E6%95%B0%E8%BF%90%E8%A1%8C%E6%95%88%E7%8E%87%E7%9A%84%E6%B5%8B%E8%AF%95%E4%B8%8E%E6%AF%94%E8%BE%83/" title="虚函数和非虚函数运行效率的测试与比较">
+								虚函数和非虚函数运行效率的测试与比较			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								四月 27日, 2021				
+							</p>
+							<p class="relate-post-content">
+								任务描述英文版  Write a class with one virtual function and one non-virtual function. Inherit a new class, make an object of...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2021/04/27/%E8%99%9A%E5%87%BD%E6%95%B0%E5%92%8C%E9%9D%9E%E8%99%9A%E5%87%BD%E6%95%B0%E8%BF%90%E8%A1%8C%E6%95%88%E7%8E%87%E7%9A%84%E6%B5%8B%E8%AF%95%E4%B8%8E%E6%AF%94%E8%BE%83/" title="虚函数和非虚函数运行效率的测试与比较">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="http://i2.tiimg.com/736723/071b4cb16c0098cf.png" alt="虚函数和非虚函数运行效率的测试与比较"/>
 							</a>
 						</div>
 					</li>												
@@ -557,6 +561,17 @@ k元组...
 </div>
 
 <!-- show math formula -->
+
+	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config(
+			{ 
+				tex2jax: {
+					inlineMath: [['$','$'], ['\\(','\\)']]
+				} 
+			}
+		);
+	</script>
 
 
 
